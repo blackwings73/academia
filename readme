@@ -1,0 +1,57 @@
+Estrutura do Banco de Dados
+O banco de dados academia contém as seguintes tabelas:
+
+Tabelas:
+alunos
+
+Armazena os dados dos alunos matriculados na academia.
+Campos:
+id_alunos: Identificador único do aluno.
+nome: Nome completo do aluno.
+data_nascimento: Data de nascimento do aluno.
+genero: Gênero do aluno (ex: "M" para masculino, "F" para feminino).
+telefone: Número de telefone do aluno.
+email: Email do aluno.
+data_cadastro: Data e hora do cadastro do aluno na academia.
+professores
+
+Armazena os dados dos professores da academia.
+Campos:
+id_professores: Identificador único do professor.
+nome: Nome completo do professor.
+especialidade: Especialidade do professor (ex: musculação, pilates, yoga).
+telefone: Número de telefone do professor.
+email: Email do professor.
+planos
+
+Armazena informações sobre os planos de matrícula disponíveis na academia.
+Campos:
+id_plano: Identificador único do plano.
+tipo_plano: Tipo de plano (ex: diário, semanal, mensal, anual).
+descricao: Descrição detalhada do plano.
+preco: Preço do plano.
+duracao_meses: Duração do plano em meses.
+treinos
+
+Armazena informações sobre os treinos específicos realizados pelos alunos.
+Campos:
+id_treino: Identificador único do treino.
+id_aluno: Identificador do aluno que está realizando o treino.
+descricao: Descrição do treino.
+data_inicio: Data e hora de início do treino.
+data_fim: Data e hora de término do treino.
+aulas
+
+Armazena informações sobre as aulas disponibilizadas pela academia.
+Campos:
+id_aula: Identificador único da aula.
+horario: Data e hora da aula.
+capacidade: Número máximo de alunos para cada aula.
+pagamentos
+
+Armazena informações sobre os pagamentos realizados pelos alunos.
+Campos:
+id_pagamento: Identificador único do pagamento.
+data_pagamento: Data do pagamento.
+valor_pago: Valor pago no pagamento.
+forma_pagamento: Forma de pagamento (p para pagamento à vista, d para débito, c para crédito).
