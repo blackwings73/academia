@@ -1,0 +1,44 @@
+drop database if exists academia;
+create database if not exists academia;
+use academia;
+create table if not exists alunos (
+id_alunos int auto_increment primary key,
+nome varchar(100),
+data_nascimento date,
+genero varchar(2),
+telefone varchar(15),
+email varchar(100),
+data_cadastro datetime
+);
+create table if not exists professores (
+id_professores int auto_increment primary key,
+nome varchar(100),
+especialidade varchar(225),
+telefone varchar(15),
+email varchar(100)
+);
+create table if not exists planos (
+id_plano int auto_increment primary key,
+tipo_plano enum("d","s","m","a"),
+descricao text,
+preco decimal(10,2),
+duracao_meses date
+);
+create table if not exists treinos (
+id_treino int auto_increment primary key,
+id_aluno int,
+descricao text,
+data_inicio datetime,
+data_fim datetime
+);
+create table if not exists aulas (
+id_aula int auto_increment primary key,
+horario datetime,
+capacidade int
+);
+create table if not exists pagamentos (
+id_pagamento int auto_increment primary key,
+data_pagamento decimal(10,2),
+valor_pago decimal(10,2),
+forma_pagamento enum("p","d","c")
+);
